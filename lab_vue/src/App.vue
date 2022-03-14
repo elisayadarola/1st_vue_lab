@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <lab/> 
+  <button @click="helloWorld">Button</button>
+  <p>{{Text}}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import lab from './components/lab.vue';
 
 export default {
-  name: 'App',
+  data () {
+    return {
+    Text: "This is a text"
+    }
+  },
   components: {
-    HelloWorld
+    lab,
+  },
+  methods: {
+    helloWorld() {
+      console.log('Hello World');
+    }
   }
 }
 </script>
